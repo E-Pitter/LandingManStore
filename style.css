@@ -37,6 +37,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: fit-content;
+    min-width: 400px;
 }
 
 /* /////////////////////////    HEADER ///////////////////////// */
@@ -59,7 +60,7 @@ header {
     background-color: var(--bg);
     padding: 0 30px;
     position: fixed;
-    z-index: 100;
+    z-index: 10;
 }
 
 /* Logo */
@@ -83,8 +84,19 @@ header {
     gap: 15px;
 }
 
+.toggle-menu {
+    font-size: 1.5rem;
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+
 .list li a{
+    font-size: 1.5rem;
     font-weight: var(--medium);
+    margin: 0 10px;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -93,7 +105,40 @@ header {
 }
 
 .list li a:hover {
-    font-size: 20px;
+    font-size: 1.8rem;
+}
+
+@media (max-width: 900px ) {
+    .toggle-menu {
+        display: block;
+    }
+    
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        left: 60px;
+        height: calc(80vh - 70px);
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 0 0 1rem 1rem;
+        background-color: #000000d9;
+        display: none;
+    }
+    .list li a{
+        font-size: 2rem;
+        font-weight: var(--medium);
+    }
+    .nabar {
+        backdrop-filter: blur(5px);
+    }
+}
+
+
+
+#toggle:checked ~ ul {
+    display: flex;
 }
 
 /* carrito */
@@ -202,6 +247,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 15px 5px;
 }
 .about-card:first-child {
     width: 100%;
@@ -406,9 +452,9 @@ h2 {
 /* /////////////////////////    CONTACTANOS  ///////////////////////// */
 
 .contact {
-    display: flex;
     height: calc(100vh - 70px);
     width: 100%;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     background-image: url(./Assets/fondoContacto.jpeg) ;
@@ -589,5 +635,8 @@ footer{
     }
     .footer-list li{
        font-size: 0.5rem;
+    }
+    .footer-message {
+        font-size: 0.5rem;
     }
 }
