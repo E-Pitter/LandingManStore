@@ -40,7 +40,7 @@ body {
     min-width: 400px;
 }
 
-/* /////////////////////////    HEADER ///////////////////////// */
+/* //////////////////////    HEADER ////////////////////// */
 
 
 /* Titulo de Header */
@@ -76,7 +76,7 @@ header {
     
 }
 
-/* /////////////////////////    NAVBAR  ///////////////////////// */
+/* //////////////////////    NAVBAR  ////////////////////// */
 
 /* Navbar */
 .navbar  ul{
@@ -154,7 +154,7 @@ header i:hover {
     font-size: 40px;
 }
 
-/* /////////////////////////    MAIN  ///////////////////////// */
+/* ///////////////////////    MAIN  /////////////////////// */
 
 /* main contenedor */
 main {
@@ -166,7 +166,7 @@ main {
     background-color: #131415;
 }
 
-/* /////////////////////////    PORTADA  ///////////////////////// */
+/* //////////////////////    PORTADA  ////////////////////// */
 
 /* Portada*/
 .hero {
@@ -205,7 +205,7 @@ main {
     }
 }
 
-/* /////////////////////////    ACERCA DE NOSOTROS ///////////////////////// */
+/* ////////////////    ACERCA DE NOSOTROS //////////////// */
 
 .about-title {
     width: 100%;
@@ -309,7 +309,7 @@ main {
 }
 
 
-/* /////////////////////////    TIENDA ///////////////////////// */
+/* ///////////////////    TIENDA /////////////////// */
 
 
 .store-container {
@@ -449,7 +449,7 @@ h2 {
     }
 }
 
-/* /////////////////////////    CONTACTANOS  ///////////////////////// */
+/* ///////////////////    CONTACTANOS  /////////////////// */
 
 .contact {
     height: calc(100vh - 70px);
@@ -562,10 +562,11 @@ input, textarea {
 @media (max-width:1000px ) {
     .contact {
         flex-direction: column;
+        justify-content: space-around;
     }
     .contact-container {
         width: 80%;
-        height: 40%;
+        height: 30%;
     }
     .contact-form {
         width: 100%;
@@ -573,12 +574,16 @@ input, textarea {
         justify-content: space-between;
     }
     .form-user {
-        width: 60%;
-        height: 100%;
+        width: 50%;
+        gap: 8px;
     }
     
     .form-message {
         width: 40%;
+    }
+
+    .form-message label {
+        font-size: 2rem;
     }
     .find-container {
         height: 50%;
@@ -587,6 +592,7 @@ input, textarea {
     .form-message textarea {
         height: 8rem;
     }
+   
 }
 @media (max-width:500px) {
     .contact-title {
@@ -639,4 +645,7 @@ footer{
     .footer-message {
         font-size: 0.5rem;
     }
+
 }
+
+/* /////////////////    NO HAY MAS PARA VER     ///////////////// */
