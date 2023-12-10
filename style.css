@@ -186,6 +186,7 @@ main {
     -moz-transition: 0.5s all ease-in-out;
     -ms-transition: 0.5s all ease-in-out;
     -o-transition: 0.5s all ease-in-out;
+    position: relative;
 }
 
 .hero-text {
@@ -193,6 +194,43 @@ main {
 
 }
 
+/* Login usuario */
+.hero-login {
+    width: 20rem;
+    height: 15rem;
+    background-color: rgba(255, 166, 0, 0.455);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    position: absolute;
+    bottom: 5%;
+    right: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+ }
+
+.hero-login label{
+    font-size: 1.5rem ;
+    font-weight: var(--medium);
+}
+
+.hero-login input {
+    height: 1.8rem;
+    padding: 0 15px;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+    backdrop-filter: blur(7px) ;
+}
+
+
+    
 @media (min-width: 1100px) {
 .hero {
     background-size: contain;
@@ -203,7 +241,109 @@ main {
         font-size: 1rem;
         font-weight: var(--medium)
     }
+    .hero-login {
+        height: 12rem;
+    }
 }
+
+/* /////////////    REGISTRO EN OTRA PAGINA  ///////////// */
+.body-login {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+ .container-border {
+    width: 90%;
+    height: 100%;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-login {
+    width: 80%;
+    height: 90%;
+    background-image: url(./Assets/login.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    padding-left: 10%;
+}
+
+/* Formulario */
+.registro-container {
+    width: 15rem;
+    height: 22rem;
+    background-color: rgba(255, 166, 0, 0.597);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.registro-container h2 {
+    font-size: 1.5rem;
+    margin: 8px 0;
+}
+
+.form input {
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+    backdrop-filter: blur(7px) ;
+}
+
+/* Boton de volver */
+.back {
+    font-weight: var(--medium);
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    border-radius: 0.3rem;
+    background-color: rgba(255, 166, 0, 0.597);
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
+
+@media (max-width: 768px ) {
+    .body-login {
+       
+    }
+    .container-border {
+        width: 90%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 425px ) {
+    .body-login {
+        
+    }
+    .container-border {
+        height: 80%;
+        width: 100%;
+    }
+}
+
 
 /* ////////////////    ACERCA DE NOSOTROS //////////////// */
 
@@ -566,7 +706,7 @@ input, textarea {
     }
     .contact-container {
         width: 80%;
-        height: 30%;
+        height: 49%;
     }
     .contact-form {
         width: 100%;
@@ -586,7 +726,7 @@ input, textarea {
         font-size: 2rem;
     }
     .find-container {
-        height: 50%;
+        height: 49%;
         width: 80%;
     }
     .form-message textarea {
@@ -601,6 +741,9 @@ input, textarea {
     }
     .contact {
         align-items: center;
+    }
+    #coment {
+        height: 20%;
     }
 }
 /* /////////////////////////    FOOTER ///////////////////////// */
@@ -647,5 +790,7 @@ footer{
     }
 
 }
+
+
 
 /* /////////////////    NO HAY MAS PARA VER     ///////////////// */
